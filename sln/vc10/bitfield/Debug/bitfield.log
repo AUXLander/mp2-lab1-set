@@ -1,4 +1,11 @@
-﻿  tbitfield.cpp
-c:\users\auxla\desktop\lab\src\tbitfield.cpp(16): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\auxla\desktop\lab\src\tbitfield.cpp(30): warning C4018: <: несоответствие типов со знаком и без знака
+﻿  tset.cpp
+  tbitfield.cpp
+c:\users\auxla\desktop\lab\src\tbitfield.cpp(17): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\auxla\desktop\lab\src\tbitfield.cpp(33): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\auxla\desktop\lab\src\tbitfield.cpp(110): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\auxla\desktop\lab\src\tbitfield.cpp(126): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\auxla\desktop\lab\src\tbitfield.cpp(147): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\auxla\desktop\lab\src\tbitfield.cpp(160): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\auxla\desktop\lab\src\tbitfield.cpp(172): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  Создание кода...
   bitfield.vcxproj -> C:\Users\auxla\Desktop\Lab\sln\vc10\Debug\bitfield.lib
