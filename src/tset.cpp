@@ -5,8 +5,6 @@
 //
 // Множество - реализация через битовые поля
 
-#include <conio.h>
-#include "Windows.h"
 #include "tset.h"
 
 TSet::TSet(int temp = 1) : BitField(temp)
@@ -22,17 +20,13 @@ TSet::TSet(const TSet &s) : BitField(s.MaxPower)
 }
 
 //// конструктор преобразования типа
+//TSet::TSet(const TBitField &bf) : BitField(-1)
+//{
+//}
 
-TSet::TSet(const TBitField &bf) : BitField(bf.GetLength())
-{
-	MaxPower = bf.GetLength();
-}
-
-
-TSet::operator TBitField()
-{
-	return BitField;
-}
+//TSet::operator TBitField()
+//{
+//}
 
 int TSet::GetMaxPower(void) const // получить макс. к-во эл-тов
 {
@@ -82,6 +76,7 @@ int TSet::operator!=(const TSet &s) const // сравнение
 			return 0;
 		}
 	}
+	
 	return 1;
 }
 
@@ -142,28 +137,10 @@ TSet TSet::operator~(void) // дополнение
 
 istream &operator>>(istream &istr, TSet &s) // ввод
 {
-	int a;
-	while (true){
-		cin >> a;
-		s.InsElem(a);
-
-		if (a = _getch() == 13) {
-			break;
-		}
-
-		a = 0;
-	}
 	return istr;
 }
 
 ostream& operator<<(ostream &ostr, const TSet &s) // вывод
 {
-	ostr << "{";
-	for (size_t i = 0; i < s.MaxPower; i++){
-		if (s.IsMember(i)) {
-			ostr << i << " ";
-		}
-	}
-	ostr << "}";
 	return ostr;
 }
