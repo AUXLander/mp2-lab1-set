@@ -117,7 +117,6 @@ TBitField& TBitField::operator=(const TBitField &bf) // присваивание
 	MemLen = bf.MemLen;
 
 	return *this;
-
 }
 
 int TBitField::operator==(const TBitField &bf) const // сравнение
@@ -150,7 +149,7 @@ TBitField TBitField::operator|(const TBitField &bf) // операция "или"
 	for (size_t i = 0; i < minMemLen; i++) {
 		temp.pMem[i] = pMem[i] | bf.pMem[i];
 	}
-
+  
 	return temp;
 }
 
@@ -164,19 +163,19 @@ TBitField TBitField::operator&(const TBitField &bf) // операция "и"
 	for (size_t i = 0; i < minMemLen; i++) {
 		temp.pMem[i] = pMem[i] & bf.pMem[i];
 	}
-
+  
 	return temp;
 }
 
-TBitField TBitField::operator~(void) // отрицание
+TBitField TBitField::operator~(void) // отрицание 
 {
 	int temp = 0;
 
-	for (int i = 0; i < BitLen % 32; i++) {
+	for (int i = 0; i < BitLen % 32; i++){
 		temp = temp + pow(2, i);
 	}
 
-	for (int i = 0; i < MemLen; i++) {
+	for (int i = 0; i < MemLen; i++){
 		pMem[i] = ~pMem[i];
 
 		if (i == MemLen - 1) {

@@ -22,6 +22,7 @@ TSet::TSet(const TSet &s) : BitField(s.MaxPower)
 }
 
 //// конструктор преобразования типа
+
 TSet::TSet(const TBitField &bf) : BitField(bf.GetLength())
 {
 	MaxPower = bf.GetLength();
@@ -81,7 +82,6 @@ int TSet::operator!=(const TSet &s) const // сравнение
 			return 0;
 		}
 	}
-
 	return 1;
 }
 
